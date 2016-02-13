@@ -39,12 +39,14 @@ module.exports = function ( options ) {
                     'font-awesome',
                     'material-ui',
                     'bootstrap',
-                    'intl'
+                    'intl',
+                    'babel-runtime'
                 ], v)
             }).concat([
                 'assets/css/bootstrap-cosmo.css',
                 'font-awesome/css/font-awesome.min.css',
-                'ladda/dist/ladda.min.css'
+                'ladda/dist/ladda.min.css',
+                'babel-polyfill'
             ])
         },
 

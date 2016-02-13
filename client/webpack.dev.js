@@ -27,7 +27,7 @@ var webpackDevConfig = {
     loaders: [
         {
             test: /\.jsx?$/,
-            loaders: [ 'react-hot', 'babel' ],
+            loaders: [ 'react-hot', 'babel?cacheDirectory' ],
             include: path.join( __dirname, 'src', 'app' ),
             exclude: path.join( __dirname, 'node_modules' )
         }

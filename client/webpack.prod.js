@@ -45,7 +45,7 @@ var webpackProdConfig = {
     loaders: [
         {
             test: /\.jsx?$/,
-            loaders: [ 'babel' ],
+            loaders: [ 'babel?cacheDirectory' ],
             include: path.join( __dirname, 'src', 'app' ),
             exclude: path.join( __dirname, 'node_modules' )
         }

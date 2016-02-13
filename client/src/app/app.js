@@ -2,7 +2,6 @@
 /* eslint global-require: 0*/
 //load CSS assets first
 require('assets/stylus/main');
-
 import {Promise} from 'es6-promise';
 import React from 'react';
 import ReactDOM from 'react-dom';
