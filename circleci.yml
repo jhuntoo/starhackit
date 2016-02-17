@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 5.0.0
+  environment:
+    CXX: g++-4.8
+  services:
+    - rabbitmq-server
+  pre:
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 10
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 10
+
+
+test:
+  pre:
+    - psql -c 'create database travis_ci_test;' -U postgres
+  post:
+    - cd client && npm run build
+    - cd server && npm run codeclimate && npm run coveralls
+
