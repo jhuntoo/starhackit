@@ -1,3 +1,8 @@
+general:
+  branches:
+    only:
+      - custom
+
 machine:
   node:
     version: 5.0.0
