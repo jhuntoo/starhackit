@@ -83,7 +83,7 @@
     "chalk": "1.1.1",
     "codeclimate-test-reporter": "0.1.1",
     "coveralls": "2.11.4",
-    "devlab": "1.5.1",
+    "devlab": "1.7.1",
     "isparta": "3.1.0",
     "istanbul": "0.3.22",
     "mocha": "2.3.3",
