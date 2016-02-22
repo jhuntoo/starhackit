@@ -20,7 +20,7 @@ machine:
 dependencies:
   pre:
     - pip install awscli
-    - docker build -t test:$CIRCLE_SHA1 ./server
+    - docker build -t jhuntoo/test:$CIRCLE_SHA1 ./server
   cache_directories:
     - client/node_modules
     - server/node_modules
@@ -32,3 +32,9 @@ test:
     - cd client && npm run build
 #    - cd server && npm run codeclimate && npm run coveralls
 
+deployment:
+  hub:
+    branch: custom
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push jhuntoo/test:$CIRCLE_SHA1
